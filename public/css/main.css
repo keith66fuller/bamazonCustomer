@@ -1,0 +1,132 @@
+/* CSS STYLESHEET FOR MAIN PAGE */
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+/* Remove the navbar's default margin-bottom and rounded borders */
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+    background-color: black !important;
+    color: white;
+    font-family: 'Patua One';
+}
+
+.nav-link {
+	color: white;
+}
+
+.navbar-brand{
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 30px;
+    color: white;
+}
+
+.a-footer{
+	color:#26a5d3;
+}
+
+body {
+    padding-top: 55px;
+    /* font-family: 'PT Serif', serif; */
+    font-family: 'Patua One';
+}
+
+.word-cloud {
+    text-align: left;
+    height: 400px;
+}
+
+.resetquery {
+    height: 10em
+}
+.querydiv-row {
+    height:33%;
+    overflow: hidden;
+}
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+/* .row.content {
+    height: 600px;
+    padding: 10px;
+    border: 1px solid black;
+} */
+
+.main-submit {
+    background-color: black !important;
+    color: white;
+}
+
+/* .user-setup {
+    margin-left: 20px;
+} */
+
+.news-sources-list {
+    max-height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.check, .Checkbox {
+    margin-right: 5px;
+}
+
+.submit-area {
+    width: 100%;
+    text-align: center;
+}
+
+.user-setup-submit {
+    background-color: black !important;
+    color: white;
+}
+
+.a-footer {
+    color:#26a5d3;
+}
+
+.slider {
+	background: #BABABA;
+}
+.form-group {
+    justify-content: center;
+}
+
+/* Set gray background color and 100% height */
+.sidenav {
+    background-color: white;
+    height: 100%;
+    border: 1px solid black;
+}
+
+/* Set black background color, white text and some padding */
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color:black;
+    color: white;
+    padding: 15px;
+    font-family: 'Patua One';
+}
+
+/* settings for sidenav background and size */
+.well {
+    height: 250px;
+    background-color: white;
+}
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+    .sidenav {
+        height: auto;
+        padding: 15px;
+    }
+    .row.content {
+        height: auto;
+    }
+}
