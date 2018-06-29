@@ -1,0 +1,11 @@
+id,product_name,department_name,price,stock_quantity
+2,"stiletto heels","womens accessories",123.24,30
+3,"combination wrench",hardware,5.76,23
+4,"geiger counter",hardware,1234.54,45
+5,toaster,"small appliances",12.45,76
+6,"desk lamp","small appliances",45.23,12
+7,"coffee cup",housewares,2.99,34
+8,"turtle neck","mens clothing",45.65,91
+9,"polo shirt","womens clothing",23.87,23
+10,"teddy bear",toys,12.99,11
+11,axe,hardware,34.22,98
