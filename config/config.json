@@ -1,12 +1,12 @@
 {
-  "test": {
+  "development": {
     "username": "root",
-    "password": null,
-    "database": "bamazon",
+    "password": "ou812",
+    "database": "bamazoncustomer",
     "host": "127.0.0.1",
     "port": 3306,
     "dialect": "mysql",
-    "logging": false
+    "logging": true
   },
   "heroku": {
     "username": "hnzbqzi6sef6xabk",

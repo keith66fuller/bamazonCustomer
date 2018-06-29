@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-  const Product = sequelize.define("Product", {
+  var Product = sequelize.define("Product", {
     id: {
       type: DataTypes.INTEGER,
       autoIncrement: true,
@@ -10,23 +10,16 @@ module.exports = function (sequelize, DataTypes) {
       allowNull: false
     },
     department_name: {
-      type: DataTypes.STRING,
+      type: DataTypes.STRING
     },
     price: {
-      type: {
-        type: DataTypes.FLOAT,
-        default: 0,
-        allowNull: false
-      }
-    },
-    stock_quantity: {
-      type: DataTypes.INTEGER,
-      default: 0,
+      type: DataTypes.DECIMAL,
+      precision: 2,
       allowNull: false
     }
   }, {
-    timestamps: false,
-  });
+      timestamps: false,
+    });
 
   return Product;
 };

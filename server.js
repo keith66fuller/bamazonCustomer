@@ -24,7 +24,7 @@ app.use(bodyParser.json());
 
 // Static directory
 app.use(express.static("public"));
-app.use('/bower_components',express.static("bower_components"));
+// app.use('/bower_components',express.static("bower_components"));
 
 express.static.mime.define({'text/javascript': ['js']});
 
@@ -38,19 +38,17 @@ app.set("view engine", "handlebars");
 
 // Routes
 // =============================================================
-require("./routes/html-routes.js")(app);
-require("./routes/source-api-routes.js")(app);
-require("./routes/article-api-routes.js")(app);
-require("./routes/user-api-routes.js")(app);
-require("./routes/source-routes.js")(app);
+require("./routes/bamazonRoutes.js")(app);
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
-db.sequelize.sync().then(function() {
-  app.listen(PORT, function() {
+db.sequelize.sync().then(() => {
+  app.listen(PORT, () => {
     console.log("App listening on PORT " + PORT);
   });
-});
+}).catch(err => {
+  throw err
+})
 
 
 
