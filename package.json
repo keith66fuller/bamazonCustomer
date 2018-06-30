@@ -5,16 +5,15 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "watch": "nodemon server.js"
+    "start": "node bamazonCustomer.js",
+    "watch": "nodemon bamazonCustomer.js"
   },
   "keywords": [],
   "author": "Keith Fuller",
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^6.0.0",
+    "cli-table-redemption": "^1.0.1",
     "inquirer": "^6.0.0",
-    "mysql2": "^1.3.6",
-    "sequelize": "^4.3.1"
+    "mysql2": "^1.3.6"
   }
 }
