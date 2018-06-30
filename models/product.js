@@ -1,31 +1,29 @@
-module.exports = function (sequelize, DataTypes) {
-  const Product = sequelize.define("Product", {
-    id: {
-      type: DataTypes.INTEGER,
-      autoIncrement: true,
-      primaryKey: true
-    },
-    product_name: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    department_name: {
-      type: DataTypes.STRING,
-    },
-    price: {
-      type: DataTypes.FLOAT,
-      precision: 5,
-      scale: 2,
-      allowNull: false
-    },
-    stock_quantity: {
-      type: DataTypes.INTEGER,
-      default: 0,
-      allowNull: false
-    }
-  }, {
-      timestamps: false,
-    });
+// Import the ORM to create functions that will interact with the database.
+var orm = require("../config/orm.js");
 
-  return Product;
+var product = {
+  all: function(cb) {
+    orm.all("products", function(res) {
+      cb(res);
+    });
+  },
+  // The variables cols and vals are arrays.
+  create: function(cols, vals, cb) {
+    orm.create("products", cols, vals, function(res) {
+      cb(res);
+    });
+  },
+  update: function(objColVals, condition, cb) {
+    orm.update("products", objColVals, condition, function(res) {
+      cb(res);
+    });
+  },
+  delete: function(condition, cb) {
+    orm.delete("products", condition, function(res) {
+      cb(res);
+    });
+  }
 };
+
+// Export the database functions for the controller (productsController.js).
+module.exports = product;
