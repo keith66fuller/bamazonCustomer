@@ -15,11 +15,11 @@
 
 ## Or Install the NPM package from npmjs
 
-npm i keith66fuller/bamazoncustomer
+`npm i keith66fuller/bamazoncustomer`
 
 ## Create database and table and seed the table.
 
-db/products_seed.sql
+`mysql -u username -p database_name < db/products_seed.sql`
 
 ## Modiy mysql user/passwd in bamazonCustomer.js lines 6-7.
 
