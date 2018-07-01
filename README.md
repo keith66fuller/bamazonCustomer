@@ -1,4 +1,8 @@
 # bamazonCustomer
+
+![bamazonCustomer in action screenshot](/doc/screenshot.jpg)
+
+
 ## Week 12 Homework
 
 # Requirements
@@ -21,7 +25,7 @@
 
 `mysql -u username -p database_name < db/products_seed.sql`
 
-## Modiy mysql user/passwd in bamazonCustomer.js lines 6-7.
+### Modify mysql user/passwd in bamazonCustomer.js lines 6-7.
 
 ## Running the application.
 
