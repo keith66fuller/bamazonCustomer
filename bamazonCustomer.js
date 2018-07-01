@@ -54,23 +54,24 @@ function doEcommerce() {
           name: 'quantity',
           message: `How many ${name} would you like?`,
           validate: value => {
-              const item = results.find((e, i) => {
+            return (
+              value <= results.find((e, i) => {
                 return e.id == purchase_id
-              }).stock_quantity;
-              if (item.stock_quantity == 0) {
-                return `Sorry, we don't have any ${name} in stock!  Try another product.`
-              } else if (value > item.stock_quantity == 0) {
-                return `Sorry, we don't have that many ${name} in stock!  Try again with ${q} or less.`
-              } else {
-                return true
-              };
+              }).stock_quantity
+            ) ? true : `Sorry, we don't have that many ${name} in stock!  Try again with ${q} or less.`
           }
         }, ])
         .then(answers => {
           const { quantity } = answers;
           console.log(`So you would like ${quantity}.`)
-          connection.query(`DELETE FROM \`products\` WHERE \`id\` = \'${purchase_id}\'`,
-          function (err, results, fields) {
+          const newQuantity = q - quantity;
+          let queryString;
+          if (newQuantity) {
+            queryString = `UPDATE \`products\` SET \`stock_quantity\`=\'${newQuantity}\' WHERE \`id\`=\'${purchase_id}\'`;
+          } else {
+            queryString = `DELETE FROM \`products\` WHERE \`id\` = \'${purchase_id}\'`
+          };
+          connection.query(queryString, (err, results, fields) => {
             if (err) {
               throw err
             } else {
