@@ -16,5 +16,17 @@
     "inquirer": "^6.0.0",
     "json-stringify-safe": "^5.0.1",
     "mysql2": "^1.3.6"
-  }
+  },
+  "directories": {
+    "doc": "doc"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keith66fuller/bamazonCustomer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/keith66fuller/bamazonCustomer/issues"
+  },
+  "homepage": "https://github.com/keith66fuller/bamazonCustomer#readme"
 }
