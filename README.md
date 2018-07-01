@@ -3,8 +3,8 @@
 
 # Requirements
 
-*nodejs 9.11.1
-*mysql 8.0.11
+* nodejs 9.11.1
+* mysql 8.0.11
 
 # Installation
 
