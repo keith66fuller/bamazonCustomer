@@ -1,11 +1,10 @@
-var stringify = require('json-stringify-safe');
 const mysql = require('mysql2');
 const inquirer = require('inquirer');
 const Table = require('cli-table-redemption');
 const connection = mysql.createConnection({
   host: 'localhost',
-  user: 'root',
-  password: 'ou812',
+  user: '',
+  password: '',
   database: 'bamazoncustomer'
 });
 
