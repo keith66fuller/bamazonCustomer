@@ -54,11 +54,16 @@ function doEcommerce() {
           name: 'quantity',
           message: `How many ${name} would you like?`,
           validate: value => {
-            return (
-              value <= results.find((e, i) => {
+              const item = results.find((e, i) => {
                 return e.id == purchase_id
-              }).stock_quantity
-            ) ? true : `Sorry, we don't have that many ${name} in stock!  Try again with ${q} or less.`
+              }).stock_quantity;
+              if (item.stock_quantity == 0) {
+                return `Sorry, we don't have any ${name} in stock!  Try another product.`
+              } else if (value > item.stock_quantity == 0) {
+                return `Sorry, we don't have that many ${name} in stock!  Try again with ${q} or less.`
+              } else {
+                return true
+              };
           }
         }, ])
         .then(answers => {
